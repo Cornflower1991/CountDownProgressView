@@ -1,4 +1,5 @@
-CountDownProgressView，项目中。刚好有个这样的需求，，写得比较简单。还是先看演示效果吧
+# CountDownProgressView
+圆形倒计时，项目中。刚好有个这样的需求，，写得比较简单。还是先看演示效果吧
 ![mark](http://ogzf36bsb.bkt.clouddn.com/blog/20161125/112407968.gif)
 
 ##### 自定义属性
