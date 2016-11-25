@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CountDownProgressView">
+        <attr name="android:text"/>
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="cdpvProgress" format="integer"/>
+        <attr name="cdpvStartAngle" format="integer"/>
+        <attr name="cdpvStrokeWidth" format="dimension"/>
+        <attr name="cdpvBackgroundColor" format="reference|color"/>
+        <attr name="cdpvProgressColor" format="reference|color"/>
+        <attr name="cdpvStrokeColor" format="reference|color"/>
+        <attr name="cdpvShowStroke" format="boolean"/>
+        <attr name="cdpvShowText" format="boolean"/>
+        <attr name="cdpvImage" format="reference"/>
+    </declare-styleable>
+
+</resources>
