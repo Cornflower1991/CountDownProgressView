@@ -15,4 +15,10 @@
         <attr name="cdpvImage" format="reference"/>
     </declare-styleable>
 
+    <declare-styleable name="custume_ripple_imageview">
+        <attr name="show_spacing_time" format="integer"></attr>
+        <attr name="imageViewWidth" format="dimension"></attr>
+        <attr name="imageViewHeigth" format="dimension"></attr>
+    </declare-styleable>
+
 </resources>

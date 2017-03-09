@@ -192,7 +192,7 @@ public class CountDownProgressView extends View {
          *  paint：绘制时所使用的画笔。
          */
         canvas.drawArc(mInnerRectF, 0, ARC, true, mBackgroundPaint);
-        canvas.drawArc(mInnerRectF, mStartAngle, currentAngle * ARC, true, mProgressPaint);
+        canvas.drawArc(mInnerRectF, mStartAngle, -currentAngle * ARC, true, mProgressPaint);
 
 
         //设置文字
@@ -310,8 +310,8 @@ public class CountDownProgressView extends View {
 
 
     public void startCountDownTime(final long countdownTime) {
-        ValueAnimator animator = ValueAnimator.ofFloat(0, 1.0f);
-        //动画时长，让进度条在CountDown时间内正好从0-360走完，这里由于用的是CountDownTimer定时器，倒计时要想减到0则总时长需要多加1000毫秒，所以这里时间也跟着+1000ms
+        ValueAnimator animator = ValueAnimator.ofFloat(1.0f, 0f);
+        //动画时长，让进度条在CountDown时间内正好从360-0走完，这里由于用的是CountDownTimer定时器，倒计时要想减到0则总时长需要多加1000毫秒，所以这里时间也跟着+1000ms
         animator.setDuration(countdownTime);
         animator.setInterpolator(new LinearInterpolator());//匀速
         animator.setRepeatCount(0);//表示不循环，-1表示无限循环
@@ -338,7 +338,7 @@ public class CountDownProgressView extends View {
     private void countdownMethod(final long countdownTime) {
         if (mMyCountDownTimer != null) {
             mMyCountDownTimer.cancel();
-            mMyCountDownTimer=null;
+            mMyCountDownTimer = null;
         }
         mMyCountDownTimer = new MyCountDownTimer(countdownTime, UNIT_MILLISECOND);
         mMyCountDownTimer.start();
@@ -368,7 +368,6 @@ public class CountDownProgressView extends View {
             invalidate();
         }
     }
-
 
 
 }

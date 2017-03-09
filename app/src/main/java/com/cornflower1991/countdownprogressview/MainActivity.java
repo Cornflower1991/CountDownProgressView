@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.cornflower1991.library.CountDownProgressView;
+import com.cornflower1991.library.ThreeCirView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -14,6 +15,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        ThreeCirView  threeCirView = (ThreeCirView) findViewById(R.id.rippleView);
+        threeCirView.initView("开始扩散");
+
+
         findViewById(R.id.start).setOnClickListener(this);
         mCountDownProgressView = (CountDownProgressView) findViewById(R.id.progressPieView);
         mCountDownProgressView.setOnProgressListener(new CountDownProgressView.OnProgressListener() {
